@@ -6,17 +6,20 @@
 
 Ce projet a été conçu dans un but **éducatif** : il démontre comment structurer un projet de jeu vidéo sans utiliser d'outils complexes (comme Webpack ou Vite), rendant le code accessible aux débutants tout en utilisant des concepts avancés (Héritage, Physique, Mathématiques).
 
+![Aperçu Sphere Lab](./assets/sphere.capture.png)
+
 ---
 
 ## 🕹️ La Ludothèque
 
-Le projet contient 5 jeux complets, chacun explorant une mécanique différente :
+Le projet contient maintenant **6 jeux complets**, chacun explorant une mécanique différente :
 
 1.  **BIRDY 974 (Flappy Style)** : Gestion de la gravité et collisions précises.
 2.  **T-ZOURIT (Runner Infini)** : Génération procédurale d'obstacles et accélération progressive.
 3.  **BRIK BREAKER (Casse-Briques)** : Physique des rebonds, power-ups et gestion de groupes d'objets.
 4.  **GENESIS (Jeu de la Vie)** : Manipulation de textures pixel par pixel (Cellular Automata) sans moteur physique.
 5.  **ZOURIT ATTACK (Game & Watch)** : Simulation d'un écran LCD rétro avec une boucle de temps saccadée (Tick-based).
+6.  **PHYSIQUE LAB (Nouveau !)** : Une simulation de sphère rotative utilisant le moteur **Arcade** détourné pour gérer des collisions circulaires mathématiques et une conservation d'énergie parfaite (rebonds infinis).
 
 ---
 
@@ -33,10 +36,11 @@ Regardez le fichier `js/scenes/BaseGameScene.js`.
 * Toutes les scènes de jeu héritent de cette classe.
 * Cela permet de coder le **Bouton Retour** et la logique de transition une seule fois, et tous les jeux en profitent automatiquement.
 
-### 3. La Gestion des "Magic Strings"
-Dans `js/Keys.js`, nous stockons tous les noms (Clés) des scènes et des assets.
-* **Mauvais :** `this.scene.start('MenuScene');` (Si on fait une faute de frappe, ça plante sans prévenir).
-* **Bon :** `this.scene.start(SCENE_KEYS.MENU);` (L'autocomplétion nous aide et évite les erreurs).
+### 3. Physique Hybride (Arcade + Mathématiques)
+Dans `js/scenes/SphereScene.js`, nous n'utilisons pas Matter.js (trop mou pour les rebonds parfaits).
+* Nous utilisons **Arcade Physics** pour les collisions entre billes (performances).
+* Mais nous calculons manuellement les collisions avec le mur circulaire via des **formules trigonométriques** (car Arcade ne gère pas les cercles creux).
+* C'est un excellent exemple de comment contourner les limitations d'un moteur physique.
 
 ### 4. Mathématiques & Effets Visuels
 Le **Menu Principal** (`js/scenes/MenuScene.js`) n'est pas une simple liste.
@@ -62,4 +66,5 @@ swich-974/
 │       ├── RunnerScene.js     # Logique Runner
 │       ├── ArkanoidScene.js   # Logique Casse-briques
 │       ├── GameOfLifeScene.js # Logique Automate Cellulaire
-│       └── ZouritAttackScene.js # Logique LCD / Game & Watch
+│       ├── ZouritAttackScene.js # Logique LCD / Game & Watch
+│       └── SphereScene.js     # Logique Physique Lab (Arcade Custom)

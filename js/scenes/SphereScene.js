@@ -34,7 +34,7 @@ class SphereScene extends Phaser.Scene {
             // NOUVEAUX PARAMÈTRES SPAWNER
             spawnPosAngle: -90,   // Position sur le cercle (en degrés)
             spawnAimOffset: 0,    // Décalage de visée (0 = vers le centre)
-            spawnOffset: 0.8,     // Distance du centre (0.8 = près du bord)
+            spawnOffset: 1,     // Distance du centre (0.8 = près du bord)
             spawnForce: 15,
             
             restitution: 1.0,     
@@ -252,9 +252,9 @@ class SphereScene extends Phaser.Scene {
         this.chkColSpawn = this.createCheckbox(panelX + 20, y, "SPAWN SUR CHOC", this.params.spawnOnCollision, v => this.params.spawnOnCollision = v); y += gap;
         
         // Nouveaux contrôles Spawner
-        this.sliders['spawnOffset'] = this.createSlider(panelX + 20, y, slWidth, "DIST. CENTRE", 0, 0.95, this.params.spawnOffset, 0.05, v => this.params.spawnOffset = v); y += gap;
+        this.sliders['spawnOffset'] = this.createSlider(panelX + 20, y, slWidth, "DIST. CENTRE", 0, 1, this.params.spawnOffset, 0.05, v => this.params.spawnOffset = v); y += gap;
         this.sliders['spawnPosAngle'] = this.createSlider(panelX + 20, y, slWidth, "POS. SUR CERCLE", -180, 180, this.params.spawnPosAngle, 5, v => this.params.spawnPosAngle = v); y += gap;
-        this.sliders['spawnAimOffset'] = this.createSlider(panelX + 20, y, slWidth, "ORIENTATION TIR", -90, 90, this.params.spawnAimOffset, 5, v => this.params.spawnAimOffset = v); y += gap;
+        this.sliders['spawnAimOffset'] = this.createSlider(panelX + 20, y, slWidth, "ORIENTATION TIR", -90, 90, this.params.spawnAimOffset, 1, v => this.params.spawnAimOffset = v); y += gap;
         
         this.sliders['spawnRate'] = this.createSlider(panelX + 20, y, slWidth, "CADENCE (ms)", 10, 500, this.params.spawnRate, 10, v => this.params.spawnRate = v); y += gap;
         this.sliders['spawnForce'] = this.createSlider(panelX + 20, y, slWidth, "FORCE", 0, 30, this.params.spawnForce, 1, v => this.params.spawnForce = v); y += gap + 10;
