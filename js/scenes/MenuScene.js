@@ -8,7 +8,9 @@ const GameList = {
     LIFE: { title: "GENESIS (ALIFE)", path: SCENE_KEYS.LIFE },
     SUIKA: { title: "SUIKA FURY", path: SCENE_KEYS.SUIKA },
     FLAPPY_BASIC:  { title: "BIRDY (Dev)", path: SCENE_KEYS.FLAPPY_BASIC },
-    RUNNER_BASIC: { title: "T-ZOURIT (Dev)", path: SCENE_KEYS.RUNNER_BASIC }
+    RUNNER_BASIC: { title: "T-ZOURIT (Dev)", path: SCENE_KEYS.RUNNER_BASIC },
+    SPHERE: { title: "SPHERE BANG", path: SCENE_KEYS.SPHERE }
+
 };
 
 class MenuScene extends Phaser.Scene {
