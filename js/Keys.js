@@ -9,7 +9,7 @@ const SCENE_KEYS = {
     RUNNER: 'RunnerScene',
     ARKANOID: 'ArkanoidScene' ,
     LIFE: 'GameOfLifeScene',
-    OCTOPUS: 'ZouritAttackScene'
+    SUIKA : 'SuikaScene'
     
 };
 

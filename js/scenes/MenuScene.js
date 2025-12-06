@@ -6,7 +6,7 @@ const GameList = {
     RUNNER: { title: "T-ZOURIT", path: SCENE_KEYS.RUNNER },
     ARKANOID: { title: "BRIK BREAKER", path: SCENE_KEYS.ARKANOID },
     LIFE: { title: "GENESIS (ALIFE)", path: SCENE_KEYS.LIFE },
-    OCTOPUS: { title: "ZOURIT ATTACK", path: SCENE_KEYS.OCTOPUS },
+    SUIKA: { title: "SUIKA FURY", path: SCENE_KEYS.SUIKA },
     FLAPPY_BASIC:  { title: "BIRDY (Dev)", path: SCENE_KEYS.FLAPPY_BASIC },
     RUNNER_BASIC: { title: "T-ZOURIT (Dev)", path: SCENE_KEYS.RUNNER_BASIC }
 };

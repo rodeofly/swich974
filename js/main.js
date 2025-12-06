@@ -25,7 +25,7 @@ const config = {
         RunnerBasicScene, 
         ArkanoidScene,
         GameOfLifeScene,
-        ZouritAttackScene
+        SuikaScene
     ]
 };
 
