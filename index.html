@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SWICH974 - La Console JS</title>    
+        
+        <meta charset="UTF-8">
+
+        <style>
+            body { 
+                background-color: #000000;
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                height: 100vh; 
+                margin: 0; 
+            }
+            #game-container {
+                border: 2px solid #00FF00;
+                box-shadow: 0 0 10px #00FF00;
+            }
+        </style>
+        
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+
+        <script src="js/Keys.js"></script>
+        <script src="js/scenes/BaseGameScene.js"></script>
+        <script src="js/scenes/BootScene.js"></script> 
+        <script src="js/scenes/MenuScene.js"></script>
+        <script src="js/scenes/FlappyBasicScene.js"></script>
+        <script src="js/scenes/FlappyScene.js"></script>
+        <script src="js/scenes/RunnerBasicScene.js"></script>
+        <script src="js/scenes/RunnerScene.js"></script>
+        <script src="js/scenes/ArkanoidScene.js"></script>
+        <script src="js/scenes/GameOfLifeScene.js"></script>
+        <script src="js/scenes/ZouritAttackScene.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <div id="game-container"></div>
+    </body>
+</html>
