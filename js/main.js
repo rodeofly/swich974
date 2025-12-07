@@ -21,7 +21,7 @@ const config = {
         }
     },
     
-    scene: [BootScene, MenuScene, FlappyScene, FlappyBasicScene, RunnerScene, RunnerBasicScene, ArkanoidScene, GameOfLifeScene, SuikaScene, SphereScene] // Ajoute SphereScene ici
+    scene: [BootScene, MenuScene, FlappyScene, FlappyBasicScene, RunnerScene, RunnerBasicScene, ArkanoidScene, GameOfLifeScene, SuikaScene, SphereScene, PhotonScene]
 };
 
 // Démarrage du moteur Phaser avec la configuration

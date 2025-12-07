@@ -10,7 +10,8 @@ const SCENE_KEYS = {
     ARKANOID: 'ArkanoidScene' ,
     LIFE: 'GameOfLifeScene',
     SUIKA : 'SuikaScene',
-    SPHERE : 'SphereScene'    
+    SPHERE : 'SphereScene',
+    PHOTON : 'PhotonScene'  
 };
 
 const ASSET_KEYS = {

@@ -7,10 +7,10 @@ const GameList = {
     ARKANOID: { title: "BRIK BREAKER", path: SCENE_KEYS.ARKANOID },
     LIFE: { title: "GENESIS (ALIFE)", path: SCENE_KEYS.LIFE },
     SUIKA: { title: "SUIKA FURY", path: SCENE_KEYS.SUIKA },
+    SPHERE: { title: "SPHERE BANG", path: SCENE_KEYS.SPHERE },
     FLAPPY_BASIC:  { title: "BIRDY (Dev)", path: SCENE_KEYS.FLAPPY_BASIC },
     RUNNER_BASIC: { title: "T-ZOURIT (Dev)", path: SCENE_KEYS.RUNNER_BASIC },
-    SPHERE: { title: "SPHERE BANG", path: SCENE_KEYS.SPHERE }
-
+    PHOTON: { title: "PHOTON (Dev)", path: SCENE_KEYS.PHOTON }
 };
 
 class MenuScene extends Phaser.Scene {
